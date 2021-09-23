@@ -1,0 +1,61 @@
+version: 2.1
+
+executors:
+  build-image:
+    docker:
+      - image: eu.gcr.io/mgcp-infrastructure/toolbox:latest
+
+commands:
+  init_script:
+    steps:
+      - run:
+          name: Authenticate to Google
+          command: |
+            echo $GCLOUD_SERVICE_KEY | base64 -d > /tmp/gcloud-service-key.json
+
+jobs:
+  plan:
+    executor: build-image
+    steps:
+      - checkout
+      - init_script
+      - run:
+          name: Lint
+          command: bin/lint.sh
+      - run:
+          name: Running Terraform Plan
+          command: bin/plan.sh
+      - persist_to_workspace:
+          root: terraform
+          paths:
+            - terraform-*.tar.gz
+            - terraform-*.plan
+
+  apply:
+    executor: build-image
+    steps:
+      - checkout
+      - init_script
+      - attach_workspace:
+          at: /root/project/terraform
+      - run:
+          name: Applying Terraform Plan
+          command: bin/apply.sh
+
+workflows:
+  terraform_flow:
+    jobs:
+      - plan
+      - hold:
+          type: approval
+          requires:
+            - plan
+          filters:
+            branches:
+              ignore: master
+      - apply:
+          requires:
+            - hold
+          filters:
+            branches:
+              ignore: master

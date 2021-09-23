@@ -1,0 +1,49 @@
+---
+imports:
+  - path: https://storage.googleapis.com/rs-gdm-stl-master/gce_instance_v2/gce_instance_v2.py
+    name: gce_instance_v2.py
+  - path: https://storage.googleapis.com/rs-gdm-stl-master/constants_v1/constants_v1.py
+    name: constants.py
+
+resources:
+  - type: constants.py
+    name: constants
+    properties:
+      project: &PROJECT
+      region: &REGION
+      zone: &ZONE
+      network: &NETWORK
+      subnetwork: &SUBNET
+
+  - name: rs-support-bastion
+    type: gce_instance_v2.py
+    properties:
+      description: 'On demand RS Support bastion'
+      machineType: f1-micro
+      zone: *ZONE
+      networkInterfaces:
+        - network: *NETWORK
+          subnetwork: *SUBNET
+          accessConfigs:
+            - type: ONE_TO_ONE_NAT
+      disks:
+        - deviceName: 'boot'
+          boot: true
+          autoDelete: true
+          initializeParams:
+            sourceImage: 'projects/debian-cloud/global/images/family/debian-9'
+      metadata:
+        items:
+          - key: startup-script
+            value: >
+              apt-get update; unattended-upgrade -v; apt-get install netcat -qy
+      tags:
+        items:
+          - rs-bastion
+      labels:
+        environment: production
+        role: temp_bastion
+      serviceAccounts:
+        - scopes:
+            - https://www.googleapis.com/auth/cloud-platform
+...
