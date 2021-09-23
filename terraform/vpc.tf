@@ -16,10 +16,10 @@ resource "google_compute_subnetwork" "GKE-Cluster-Services" {
 }
 
 resource "google_compute_subnetwork" "GKE-Cluster-Pods" {
-  name = "sma-subnet-services"
+  name = "sma-subnet-pods"
   ip_cidr_range = "10.128.128.0/17"
   region = var.region[1]
-  network = "mgcp-1180845-sma"
+  network = "mgcp-1180845-svpc"
 }
 
 resource "google_compute_subnetwork" "GKE-Cluster-Nodes" {
