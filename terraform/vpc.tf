@@ -35,3 +35,18 @@ resource "google_compute_subnetwork" "Other-services" {
   region = var.region[0]
   network = "mgcp-1180845-sma"
 }
+
+resource "google_compute_firewall" "rules" {
+  project     = var.project_id
+  name        = "bastion-access"
+  network     = "mgcp-1180845-svpc"
+  description = "Creates firewall rule targeting tagged instances"
+  source_ranges = ["0.0.0.0/0"]
+  priority     = 1000
+
+  allow {
+    protocol  = "tcp"
+    ports     = ["22"]
+  }
+  target_tags = ["bastioninstance"]
+}
