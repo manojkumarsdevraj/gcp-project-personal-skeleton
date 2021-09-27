@@ -2,3 +2,4 @@
 *sharedsecret.txt
 .terraform
 terraform.state
+key.json
