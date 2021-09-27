@@ -55,12 +55,12 @@ resource "google_container_cluster" "gke_cluster" {
 resource "google_container_node_pool" "cluster1_nodes" {
   name       = "crocus-nodepool-test"
   location   = var.region[0]
-  cluster    = "cluster-sma-new "
+  cluster    = "${google_container_cluster.gke_cluster.name}"
   node_count = 1
 
   node_config {
     preemptible     = false
-    machine_type    = "n1-standard-4"
+    machine_type    = "n1-standard-2"
     disk_size_gb    = 20
     disk_type       = "pd-ssd"
     image_type      = "COS"
