@@ -1,20 +1,20 @@
 provider "google" {
+  credentials = file("../key.json")
   project = var.project_id
-  region  = var.region
-  version = "2.19"
+  region  = var.region[0]
 }
 
 provider "google-beta" {
+  credentials = file("../key.json")
   project = var.project_id
-  region  = var.region
-  version = "2.19"
+  region  = var.region[0]
 }
 
-# terraform {
-#   required_version = "0.12.16"
+terraform {
+  //required_version = "0.14.7"
 
-#   backend "gcs" {
-#     bucket = "REPLACE_ME"
-#     prefix = "PROJECT_ID"
-#   }
-# }
+  backend "gcs" {
+    bucket = "1180845-tfstate"
+    prefix = "caramel-spot-326810"
+  }
+}

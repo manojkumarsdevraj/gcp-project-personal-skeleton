@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "caramel-spot-326810",
+  "private_key_id": "4954e3aa2a4790e77920acbda65a5f11869993d5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC/b2pX5oPxy3eH\nGGr3YZoiZuBGqHEQMTssLaRbq6p0DeJLtU1+ipRDOZetoyJba5HnD6Jfp80Va5zb\ny3u9XY6rjHP567zM/E1oxMjcTKu5diGRvt9JyH1aDkn/re+uZW8RZkH0kv4uEPed\nKafju1dGnjg4NhcL5fra1o7dlCgV/72hsSVbcA9G7RjYM2NwFLKTRMaGpuglWPE5\nigB4GFsdOe22PbT6orQ80eZOoxTI8jXg+DX+pmVmZhSr9kvrlWDMYIcopZBzQRgy\nXN09lCLBJX6ABiA5jDGl4N4i1noQCwPXD9rbQrVCUri769nRo93wYdNASsSU+vYD\nufSnL2S/AgMBAAECggEAHohR+RcRBahNYMSqOtkxpjmrnQQR6bflwiloGh7fyYbK\nswcwXEsUqUGESZ4dRWDQx9OciDkmjTtkAe0LHVbQrIJy9PIpDgtSUAV4K9AmtiZ7\nOthV8K9YyYZB6H+rcgXyQworjCtC/cHtsalf163yQOx3TFqELnz4bPLk8mjw7nZb\nxxOcyt59p7uJ0hCPjQSDnUS+AlX5u9Hs7hk7Z4mlDND5uyArN53TKskNEFO1VhZB\n0b2yIljlG6+euHuC8P1yQMs68OOSFn7OPqZxrgFAE10UG6NDRoQ/IT9aiO/hYTk0\nmLH9Jm15XJ3IFDDPE6F8YRc+DgDr0YT6A3vQ0gdnEQKBgQD7AQi3EJdt51MCdW3v\nQDMuIL/rEFZGg+JjzpAa4vPSloina+q1OtqIe7MWVKtKoAsyrj6PFUlyebfSiT5J\npy6x9CnpX855WyEVFzQKX9UnMwZHIa+a4aAzHRYFBxjWYqt+pZaogpaRa6wRILJW\n6n1RhTc4d1ZMuieYquvjsxtxYwKBgQDDPtq5E8IaD7bqoz1S8CcfZrzxn/u57l/S\niCp3mPhm3R0a0ugkmxF+w9/XNV10Ecrh49NvsM/TpJv6Uw8dPpAK/dQR0li9Z7/C\nYW7Lq8slC3kczWWu4t1n9SFbXNQhiSka2q2UTTYlUnOISm4vijdygkun/wIKbtT5\n5pTY0rLr9QKBgH+pAvm4oovvPzTc7NDmYiFv3qx7XqX2pcoFYR2LmF7e2RnttS3/\nhO4tm+QbpBMMWyWnoYG8XeKvLWMTEm77bLBtcnOTmrv2MVk8t+ce3pZVSTgcVef8\nITJd9LkR5vwCqx56sal64YGMtbLwYkP6d0pi6rb5WxcjBsiLBfaFPcvpAoGARFF2\nD1TOknf1NV0xVBgcWGyGqLWmS4URmoVy9q5cHQI58Ozjtgtcr9KyPIe7z6V6LFif\n33ErB4+N1KXDoCQIGxB+aE4GJyBqhQW60yGlz6yYEG/+qJdRidLIfUOaJrHr5C2o\nlz/9NkoHiyUgMRpYFIVrG7mraSMm+tqoMsZnPRECgYEAz5WiGbnspCOwsrT3UZTv\nV8oxFnoTiO873aOtKbeGcTn4kdYjKn/mxbjvtXhrYHv1DVGJdYHjDBsHwwb9bYy8\nOwObte+w2iA6DR9AqjURvEu9R2Lq2np0VkG/t5nitdtJ/faiOJa6Ux1Wd4eqQ669\n3UYp9KgmaxJDDMF0cGmBNe4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "manoj-terraform@caramel-spot-326810.iam.gserviceaccount.com",
+  "client_id": "105677146850992044049",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/manoj-terraform%40caramel-spot-326810.iam.gserviceaccount.com"
+}
