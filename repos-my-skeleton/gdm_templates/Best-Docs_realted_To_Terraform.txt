@@ -1,0 +1,21 @@
+Best-Docs_realted_To_Terraform
+
+Creating VM with custom network:
+https://medium.com/@krishan.lbsim/automating-network-deployment-on-google-cloud-platform-using-terraform-cc8a9c8c9980
+
+VPC creation-Rack repo:
+816368-gcp-gcp-816368-ma-sharedvpc-ManageAmerica-Shared-VPC
+816368-gcp-gcp-816368-manageamerica-prod-ManageAmerica-Prod
+https://github.com/rackspace-infrastructure-automation/1192365-gcp-mgcp-1192365-ipsos-datalib-dev-ipsos-datalib-dev
+
+terraform GCP link:
+https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/getting_started
+
+
+Monitoring:-
+    https://one.rackspace.com/display/MGCP/Monitoring+Base+Policy+Deployment
+    https://one.rackspace.com/pages/viewpage.action?spaceKey=MGCP&title=MGCP+-+Windows+instances#MGCP-Windowsinstances-Deployment
+
+Best Terraform kube private cluster config:
+
+https://thoeny.dev/create-a-private-gcp-kubernetes-cluster-using-terraform
