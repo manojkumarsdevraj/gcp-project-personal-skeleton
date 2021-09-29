@@ -50,3 +50,26 @@ resource "google_compute_attached_disk" "tmp-disk-data_attachment" {
   disk     = google_compute_disk.tmp-disk-data.id
   instance = google_compute_instance.bastion.id
 }
+
+resource "google_compute_resource_policy" "policy" {
+  name = "my-resource-policy"
+  region = var.region[0]
+  snapshot_schedule_policy {
+    schedule {
+      daily_schedule {
+        days_in_cycle = 1
+        start_time = "10:00"
+      }
+    }
+    //retention_policy {
+      //max_retention_days    = 8
+      //on_source_disk_delete = "APPLY_RETENTION_POLICY"
+    //}
+  }
+}
+
+resource "google_compute_disk_resource_policy_attachment" "attachment" {
+  name = google_compute_resource_policy.policy.name
+  disk = google_compute_disk.tmp-disk-data.name
+  zone = var.zones[1]
+}
